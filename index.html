@@ -1,90 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Form Challenge</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<h1>User Registration Form</h1>
-<form action="/submit" method="post">
-    <fieldset>
-        <legend>Personal Information</legend>
-
-        <label for="firstName">First Name</label>
-        <input type="text" id="firstName" name="firstName" required>
-
-        <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" name="lastName" required>
-
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
-
-        <label for="bio">Bio</label>
-        <textarea id="bio" name="bio" rows="4"></textarea>
-
-        <label>Gender</label>
-        <div class="radio-group">
-            <label><input type="radio" name="gender" value="Male" required> Male</label>
-            <label><input type="radio" name="gender" value="Female"> Female</label>
-            <label><input type="radio" name="gender" value="Other"> Other</label>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- --- 1st Filedset --- -->
+      <div class="child">
+        <div class="child-1-container">
+          <h1 class="top-heading">User Registration Form.</h1>
         </div>
-    </fieldset>
+        <form class="child-2-container">
+          <fieldset>
+            <legend>Personal Information</legend>
+            <div>
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required />
 
-    <fieldset>
-        <legend>Preferences</legend>
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required />
 
-        <label>Interests</label>
-        <div class="checkbox-group">
-            <label><input type="checkbox" name="interests" value="Music"> Music</label>
-            <label><input type="checkbox" name="interests" value="Sports"> Sports</label>
-            <label><input type="checkbox" name="interests" value="Reading"> Reading</label>
-        </div>
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
 
-        <label for="country">Country</label>
-        <select id="country" name="country" required>
-            <option value="">Select a country</option>
-            <option value="United States">United States</option>
-            <option value="Canada">Canada</option>
-            <option value="Australia">Australia</option>
-            <option value="Others">Others</option>
-        </select>
+            <label for="bio">Bio</label>
+            <textarea id="bio" name="bio" rows="4"></textarea>
+            <label>Gender</label>
+            <div class="radio-group">
+              <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="Male"
+                required
+              />
+              <label for="male" class="radio-label">Male</label>
 
-        <label for="preferredColors">Preferred Colors</label>
-        <select id="preferredColors" name="preferredColors" multiple>
-            <option value="Red">Red</option>
-            <option value="Blue">Blue</option>
-            <option value="Green">Green</option>
-            <option value="Yellow">Yellow</option>
-        </select>
-    </fieldset>
+              <input type="radio" id="female" name="gender" value="Female" />
+              <label for="female" class="radio-label">Female</label>
 
-    <fieldset>
-        <legend>Additional Details</legend>
+              <input type="radio" id="other" name="gender" value="Other" />
+              <label for="other" class="radio-label">Other</label>
+            </div>
+          </fieldset>
+          <!-- ---2nd Filedset --- -->
+          <fieldset>
+            <legend>Preferences</legend>
+            <label>Hobbies</label>
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                id="circket"
+                name="hobbies"
+                value="Circket"
+              />
+              <label for="circket" class="checkbox-label">Circket</label>
 
-        <label for="profilePicture">Profile Picture</label>
-        <input type="file" id="profilePicture" name="profilePicture">
+              <input
+                type="checkbox"
+                id="football"
+                name="hobbies"
+                value="FootBall"
+              />
+              <label for="football" class="checkbox-label">FootBall</label>
 
-        <label for="birthdate">Birthdate</label>
-        <input type="date" id="birthdate" name="birthdate" required>
+              <input
+                type="checkbox"
+                id="hockey"
+                name="hobbies"
+                value="Hockey"
+              />
+              <label for="hockey" class="checkbox-label">Hockey</label>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+              <input
+                type="checkbox"
+                id="tennis"
+                name="hobbies"
+                value="Tennis"
+              />
+              <label for="tennis" class="checkbox-label">Tennis</label>
 
-        <label for="website">Website</label>
-        <input type="url" id="website" name="website">
+              <input
+                type="checkbox"
+                id="basketball"
+                name="hobbies"
+                value="Basketball"
+              />
+              <label for="basketball" class="checkbox-label">Basketball</label>
 
-        <label for="search">Search</label>
-        <input type="search" id="search" name="search">
-    </fieldset>
+              <input
+                type="checkbox"
+                id="swimming"
+                name="hobbies"
+                value="Swimming"
+              />
+              <label for="swimming" class="checkbox-label">Swimming</label>
+            </div>
 
-    <button type="submit">Submit</button>
-</form>
+            <label for="country">Country</label>
+            <select name="country" id="country" required>
+              <option value="">Select a country</option>
+              <option value="Pakistan">Pakistan</option>
+              <option value="Japan">Japan</option>
+              <option value="France">France</option>
+              <option value="Germany">Germany</option>
+              <option value="South Africa">South Africa</option>
+              <option value="Russia">Russia</option>
+              <option value="Brazil">Brazil</option>
+              <option value="China">China</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Other">Other</option>
+            </select>
 
-</body>
+            <label for="preferredColors">PreferredColors</label>
+            <select name="preferredColors" id="preferredColors" required>
+              <option value="">Select a Colors</option>
+              <option value="Red">Red</option>
+              <option value="Blue">Blue</option>
+              <option value="Green">Green</option>
+              <option value="Yellow">Yellow</option>
+              <option value="Orange">Orange</option>
+              <option value="Gray">Gray</option>
+              <option value="Pink">Pink</option>
+              <option value="Light Blue">Light Blue</option>
+              <option value="Dark Blue">Dark Blue</option>
+            </select>
+          </fieldset>
+          <!-- ---3rd Filedset --- -->
+          <fieldset>
+            <legend>Additional Details</legend>
+            <label for="profilePicture">ProfilePicture</label>
+            <input type="file" id="profilePicture" name="profilePicture"/>
+
+            <label for="birthdate">Birthdate</label>
+            <input type="date" id="birthdate" name="birthdate" required/>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required/>
+
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website"/>
+
+            <label for="search">Search</label>
+            <input type="search" id="search" name="search"/>
+          </fieldset>
+          <!-- ---Button Filedset --- -->
+          <div class="btn">
+            <button class="button" type="submit">Submit</button>
+            <button class="button" type="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
